@@ -2,5 +2,5 @@
 
 
 Week 1: HTML/CSS/GIT
-</b>
+</br>
 Week 2: HTML/CSS/GIT
