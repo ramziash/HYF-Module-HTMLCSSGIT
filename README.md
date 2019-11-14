@@ -1,4 +1,5 @@
 # HYF-Module-HTMLCSSGIT
 
 
-link 1: https://ramziash.github.io/HYF-Module-HTMLCSSGIT/Week1-uploaded/Resume.html
+Week 1: HTML/CSS/GIT
+Week 2: HTML/CSS/GIT
