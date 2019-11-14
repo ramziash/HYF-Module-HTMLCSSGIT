@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('webfont.eot'); /* IE9 Compat Modes */
+    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body{
+    font-family: 'MyWebFont', 'Times New Roman', Times, serif;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+header{
+    background: darkcyan;
+    padding-top: 33.3333px;
+    min-height: 70px;
+    border-bottom: rgb(115, 11, 184) 3px solid;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 70px;
+}
+
+
+/* Float part */
+
+#grid-floats{
+    float:left;
+}
+
+#grid-floats .grid-item{
+    float:left;
+    width:21.5%;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    text-align: center;
+    list-style-type: none;
+    cursor: pointer;
+    height: 100%;
+    border:8px solid #999999;
+    border-radius: 5em;
+}
+
+#grid-floats .grid-item img{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Float Media part */
+
+ 
+@media (max-width: 600px) {
+    #grid-floats .grid-item {
+        width: 35%;
+    }
+
+    #grid-floats .grid-item:first-child {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    #grid-floats .grid-item {
+        width: 25%;
+    }
+
+    #grid-floats .grid-item:first-child,
+    #grid-floats .grid-item:nth-child(2){
+        width: 41%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    #grid-floats .grid-item {
+        width: 20%;
+    }
+    #grid-floats .grid-item:first-child {
+        width: 50%;
+    }
+
+}
+
+
+
+/* Flex part */
+
+
+#grid-flex {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 95%
+}
+
+#grid-flex .grid-item{
+    width:21%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    list-style-type: none;
+    cursor: pointer;
+    border:8px solid #999999;
+    border-radius: 5em;
+}
+
+
+
+/* Flex Media Part */
+
+
+@media screen and (max-width: 600px) {   
+    #grid-flex .grid-item:first-child {
+        align-self: flex-start;
+        flex-basis: 100%;
+    }
+    #grid-flex .grid-item:not(:first-child) {
+        flex: 0 0 35%;
+    }
+    #grid-flex .grid-item img{
+        width:50%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    #grid-flex .grid-item:first-child,
+    #grid-flex .grid-item:nth-child(2)  {
+        width: 41%;
+    }
+
+    #grid-flex .grid-item:not(:first-child),
+    #grid-flex .grid-item:not(:nth-child(2)) {
+        box-sizing: border-box;
+    }
+
+    #grid-flex .grid-item img{
+        width:50%;
+    }
+
+    #grid-flex .grid-item{
+        width: 29%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #grid-flex .grid-item:first-child {
+        width: 50%;
+    }
+
+    #grid-flex .grid-item:not(:first-child),
+    #grid-flex .grid-item:not(:nth-child(2)) {
+        box-sizing: border-box;
+    }
+
+    #grid-flex .grid-item img{
+        width:50%;
+    }
+    
+}
+
+
+
+/* Hover & Animation part */
+
+li > img:hover{
+    opacity: 0.6;
+    color: #000;
+    background-color: #ccc;
+}
+
+li> h3{
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+li > h3:hover{
+    color: darkgray;
+    background-color: rgb(253, 249, 249);
+    width: 100%;
+    height: 100%;
+    transform: rotate(360deg)
+}
