@@ -1,0 +1,46 @@
+###### Codes for Week 3 Assignment #########
+
+echo "Tiger
+ Lion
+ Leopard" > zoo.txt
+
+git init
+
+git add zoo.txt
+
+git status
+
+git commit -m "first zoo animals"
+
+git remote add origin https://github.com/ramziash/animals.git
+
+git push -u origin master
+
+
+
+-----
+
+
+git branch new-feature
+
+git checkout new-feature
+
+echo "Dog
+cat
+Lizard" > pet.txt
+
+echo "Giraffe
+Rhino" >> zoo.txt
+
+git add zoo.txt
+
+git add pet.txt
+
+git commit -m "modified zoo file + pets file"
+
+git push -u origin new-feature
+
+git checkout master
+
+git pull
+
